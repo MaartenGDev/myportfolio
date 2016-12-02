@@ -1,0 +1,23 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans");
+body {
+  padding: 0;
+  margin: 0;
+  font-family: 'Open Sans', sans-serif; }
+
+.nav {
+  text-align: right; }
+  .nav__list {
+    padding: 0 20px; }
+  .nav__item {
+    display: inline-block;
+    text-transform: uppercase;
+    margin-left: 10px; }
+    .nav__item--title {
+      float: left;
+      margin-left: 0; }
+  .nav__link {
+    text-decoration: none;
+    color: #6D6E6F; }
+
+.profile__title {
+  font-size: 50px; }

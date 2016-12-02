@@ -1,0 +1,28 @@
+{
+  "name": "myportfolio",
+  "version": "1.0.0",
+  "description": "portfolio site with case studies",
+  "main": "index.js",
+  "scripts": {
+    "sass": "node-sass src/sass/app.scss public/css/app.css --watch"
+  },
+  "repository": {
+    "url": "git@github.com:MaartenGDev/myportfolio.git",
+    "type": "git"
+  },
+  "author": "MaartenGDev",
+  "license": "MIT",
+  "dependencies": {
+    "babel-core": "^6.18.2",
+    "babel-loader": "^6.2.8",
+    "babel-preset-es2015": "^6.18.0",
+    "css-loader": "^0.26.1",
+    "express": "^4.14.0",
+    "express-handlebars": "^3.0.0",
+    "handlebars": "^4.0.6",
+    "node-sass": "^3.13.0",
+    "sass-loader": "^4.0.2",
+    "style-loader": "^0.13.1",
+    "webpack": "^1.13.3"
+  }
+}
