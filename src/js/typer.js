@@ -1,19 +1,53 @@
-class Typed{
-    type(text, time, selector){
-        const element = document.querySelector(selector);
-        const letters = text.split("");
-        let position = 0;
+class Typed {
+    sleep(time) {
+        return new Promise((resolve) => setTimeout(resolve, time));
+    }
 
-        const interval = setInterval(() => {
-            if(position < letters.length){
-                console.log(letters[position]);
-                element.innerHTML += letters[position];
-            }else{
-                clearInterval(interval);
-            }
+    type(elements) {
+        let index = 0;
 
-            position++;
-        }, time);
+
+        let nextItem = (index) => {
+            const {selector, text, time} = elements[index];
+            const letters = text.split("");
+
+            const element = document.querySelector(selector);
+
+            this.loopThroughLetters(element, letters, time).then(() => {
+                index++;
+
+                if(index < elements.length){
+                    nextItem(index)
+                }
+            });
+        };
+
+        nextItem(index)
+
+    }
+
+    loopThroughLetters(element, letters, time) {
+        return new Promise(res => {
+            let index = 0;
+
+            const nextItem = (index) => {
+                this.sleep(time).then(() => {
+                    element.innerHTML += letters[index];
+
+                    index++;
+
+                    if(index < letters.length){
+                        nextItem(index);
+                    }else{
+                        res();
+                    }
+                })
+            };
+
+            nextItem(index);
+        });
+
+
     }
 }
 

@@ -20,4 +20,16 @@ body {
     color: #6D6E6F; }
 
 .profile__title {
-  font-size: 50px; }
+  font-size: 50px;
+  display: inline-block; }
+
+.profile__tag--type {
+  font-style: italic;
+  color: #34495e; }
+
+.profile__tag--spacing {
+  border-bottom: 3px solid #ffffff; }
+
+.profile__tag--branch {
+  border-bottom: 3px solid #8e44ad;
+  color: #8e44ad; }

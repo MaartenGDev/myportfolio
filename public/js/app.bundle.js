@@ -49,7 +49,20 @@
 	var Typer = __webpack_require__(1);
 
 	var typer = new Typer();
-	typer.type('Software Developer', 100, '.profile__title');
+	var content = [{
+	    text: 'Software',
+	    selector: '.profile__tag--type',
+	    time: 50
+	}, {
+	    text: ' ',
+	    selector: '.profile__tag--spacing',
+	    time: 0
+	}, {
+	    text: 'Developer',
+	    selector: '.profile__tag--branch',
+	    time: 80
+	}];
+	typer.type(content);
 
 /***/ },
 /* 1 */
@@ -67,22 +80,64 @@
 	    }
 
 	    _createClass(Typed, [{
+	        key: "sleep",
+	        value: function sleep(time) {
+	            return new Promise(function (resolve) {
+	                return setTimeout(resolve, time);
+	            });
+	        }
+	    }, {
 	        key: "type",
-	        value: function type(text, time, selector) {
-	            var element = document.querySelector(selector);
-	            var letters = text.split("");
-	            var position = 0;
+	        value: function type(elements) {
+	            var _this = this;
 
-	            var interval = setInterval(function () {
-	                if (position < letters.length) {
-	                    console.log(letters[position]);
-	                    element.innerHTML += letters[position];
-	                } else {
-	                    clearInterval(interval);
-	                }
+	            var index = 0;
 
-	                position++;
-	            }, time);
+	            var nextItem = function nextItem(index) {
+	                var _elements$index = elements[index],
+	                    selector = _elements$index.selector,
+	                    text = _elements$index.text,
+	                    time = _elements$index.time;
+
+	                var letters = text.split("");
+
+	                var element = document.querySelector(selector);
+
+	                _this.loopThroughLetters(element, letters, time).then(function () {
+	                    index++;
+
+	                    if (index < elements.length) {
+	                        nextItem(index);
+	                    }
+	                });
+	            };
+
+	            nextItem(index);
+	        }
+	    }, {
+	        key: "loopThroughLetters",
+	        value: function loopThroughLetters(element, letters, time) {
+	            var _this2 = this;
+
+	            return new Promise(function (res) {
+	                var index = 0;
+
+	                var nextItem = function nextItem(index) {
+	                    _this2.sleep(time).then(function () {
+	                        element.innerHTML += letters[index];
+
+	                        index++;
+
+	                        if (index < letters.length) {
+	                            nextItem(index);
+	                        } else {
+	                            res();
+	                        }
+	                    });
+	                };
+
+	                nextItem(index);
+	            });
 	        }
 	    }]);
 
