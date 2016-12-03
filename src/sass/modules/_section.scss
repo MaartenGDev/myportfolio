@@ -1,0 +1,12 @@
+.section{
+  &__item{
+    max-width: 960px;
+    margin: 0 auto;
+  }
+  &__content{
+    width: 50%;
+  }
+  &__image{
+    width: 50%;
+  }
+}

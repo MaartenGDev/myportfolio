@@ -1,8 +1,12 @@
-@import url("https://fonts.googleapis.com/css?family=Open+Sans");
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400");
 body {
   padding: 0;
   margin: 0;
   font-family: 'Open Sans', sans-serif; }
+
+.l-container {
+  width: calc(100% - 40px);
+  margin: 0 20px; }
 
 .nav {
   text-align: right; }
@@ -19,17 +23,35 @@ body {
     text-decoration: none;
     color: #6D6E6F; }
 
-.profile__title {
-  font-size: 50px;
-  display: inline-block; }
+.profile {
+  width: calc(100% - 40px);
+  margin: 0 20px;
+  height: 100vh; }
+  .profile__title {
+    margin-top: 100px;
+    font-size: 50px;
+    display: inline-block; }
+  .profile__description {
+    margin-top: 40px;
+    max-width: 50%;
+    line-height: 28px;
+    font-weight: 300; }
+  .profile__tag--type {
+    color: #34495e;
+    border-bottom: 3px solid #16a085; }
+  .profile__tag--branch {
+    font-style: italic;
+    color: #34495e; }
 
-.profile__tag--type {
-  font-style: italic;
-  color: #34495e; }
+.section__item {
+  max-width: 960px;
+  margin: 0 auto; }
 
-.profile__tag--spacing {
-  border-bottom: 3px solid #ffffff; }
+.section__content {
+  width: 50%; }
 
-.profile__tag--branch {
-  border-bottom: 3px solid #8e44ad;
-  color: #8e44ad; }
+.section__image {
+  width: 50%; }
+
+.tag {
+  border-bottom: 2px solid #2c3e50; }

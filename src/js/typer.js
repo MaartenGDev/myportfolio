@@ -6,7 +6,6 @@ class Typed {
     type(elements) {
         let index = 0;
 
-
         let nextItem = (index) => {
             const {selector, text, time} = elements[index];
             const letters = text.split("");
