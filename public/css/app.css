@@ -5,8 +5,12 @@ body {
   font-family: 'Open Sans', sans-serif; }
 
 .l-container {
-  width: calc(100% - 40px);
-  margin: 0 20px; }
+  width: calc(100% - 40px); }
+
+.l-projects {
+  margin-bottom: 20px;
+  display: flex;
+  flex-flow: wrap; }
 
 .nav {
   text-align: right; }
@@ -43,15 +47,133 @@ body {
     font-style: italic;
     color: #34495e; }
 
+.section__title {
+  margin-top: 0;
+  font-size: 30px;
+  margin-bottom: 0; }
+
 .section__item {
   max-width: 960px;
   margin: 0 auto; }
 
 .section__content {
-  width: 50%; }
+  width: 50%;
+  display: inline-block;
+  float: right; }
 
 .section__image {
-  width: 50%; }
+  width: calc(50% - 20px);
+  display: inline-block; }
+
+.section__description {
+  line-height: 28px;
+  font-weight: 300; }
 
 .tag {
   border-bottom: 2px solid #2c3e50; }
+
+.chip {
+  background-color: #e4e4e4;
+  border-radius: 16px;
+  color: #656565;
+  display: inline-block;
+  font-size: 13px;
+  font-weight: 500;
+  height: 32px;
+  line-height: 32px;
+  margin-bottom: 5px;
+  padding: 0 12px; }
+  .chip:hover {
+    background-color: #cbcbcb; }
+
+.project {
+  background-color: #fff;
+  display: inline-block;
+  position: relative;
+  height: 300px;
+  overflow: hidden;
+  flex-basis: calc(100% / 3);
+  flex-flow: row wrap;
+  margin: 0; }
+  .project__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0; }
+    .project__overlay--smooth {
+      animation: lighten 0.5s forwards; }
+    .project__overlay--dark {
+      animation: darken 0.5s forwards; }
+  .project__image {
+    height: 100%; }
+    .project__image--preview {
+      animation: scaleDown 0.5s forwards; }
+    .project__image--zoomed {
+      animation: scaleUp 0.5s forwards; }
+  .project__chip-list {
+    margin: 0 30px; }
+  .project__chip--zoomed {
+    animation: growChip 0.5s forwards; }
+  .project__chip--hidden {
+    display: none; }
+  .project__view {
+    width: calc(100% - 20px);
+    text-transform: uppercase;
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+    background-color: white;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    border-radius: 3px;
+    margin: 0 10px 10px;
+    animation: growButton 0.5s forwards; }
+    .project__view--hidden {
+      display: none; }
+  .project__link {
+    padding: 10px 0;
+    color: rgba(0, 0, 0, 0.8); }
+  .project__title {
+    color: white;
+    margin: 30px 10px 10px 30px;
+    font-size: 35px; }
+
+@keyframes hideChip {
+  from {
+    opacity: 1; }
+  to {
+    opacity: 0; } }
+
+@keyframes growChip {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+
+@keyframes growButton {
+  from {
+    width: 50%; }
+  to {
+    width: calc(100% - 20px); } }
+
+@keyframes lighten {
+  from {
+    background-color: rgba(0, 0, 0, 0.8); }
+  to {
+    background-color: rgba(0, 0, 0, 0.6); } }
+
+@keyframes darken {
+  from {
+    background-color: rgba(0, 0, 0, 0.6); }
+  to {
+    background-color: rgba(0, 0, 0, 0.8); } }
+
+@keyframes scaleDown {
+  from {
+    transform: scale(1.1); }
+  to {
+    transform: scale(1); } }
+
+@keyframes scaleUp {
+  to {
+    transform: scale(1.1); } }

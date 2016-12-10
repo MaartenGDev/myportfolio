@@ -1,12 +1,26 @@
-.section{
-  &__item{
+.section {
+
+  &__title{
+    margin-top: 0;
+    font-size: 30px;
+    margin-bottom: 0;
+  }
+
+  &__item {
     max-width: 960px;
     margin: 0 auto;
   }
-  &__content{
+  &__content {
     width: 50%;
+    display: inline-block;
+    float: right;
   }
-  &__image{
-    width: 50%;
+  &__image {
+    width: calc(50% - 20px);
+    display: inline-block;
+  }
+  &__description{
+    line-height: 28px;
+    font-weight: 300;
   }
 }
