@@ -7,3 +7,9 @@
   width: 960px;
   padding-bottom: 50px;
 }
+
+@media (max-width: 1080px) {
+  .l-tabs {
+    width: 100%;
+  }
+}

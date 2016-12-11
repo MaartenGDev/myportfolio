@@ -31,3 +31,11 @@
     }
   }
 }
+
+@media (max-width: 1080px) {
+  .tabs {
+    width: calc(100% - 40px);
+    margin-left: 10px;
+    margin-right: 30px;
+  }
+}

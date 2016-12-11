@@ -82,6 +82,18 @@
   }
 }
 
+@media (max-width: 1080px) {
+  .project {
+    flex-basis: calc(100% / 2);
+  }
+}
+
+@media (max-width: 600px) {
+  .project {
+    flex-basis: 100%;
+  }
+}
+
 @keyframes hideChip {
   from {
     opacity: 1;

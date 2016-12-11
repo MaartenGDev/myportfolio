@@ -12,6 +12,10 @@ body {
   width: 960px;
   padding-bottom: 50px; }
 
+@media (max-width: 1080px) {
+  .l-tabs {
+    width: 100%; } }
+
 .l-projects {
   display: flex;
   flex-flow: wrap; }
@@ -78,6 +82,12 @@ body {
   .profile__links {
     margin-top: 50px;
     margin-bottom: 100px; }
+
+@media (max-width: 1080px) {
+  .profile__title {
+    font-size: 35px; }
+  .profile__description {
+    max-width: 100%; } }
 
 .section--title {
   text-align: center;
@@ -165,6 +175,12 @@ body {
     .tabs__item--hidden {
       display: none; }
 
+@media (max-width: 1080px) {
+  .tabs {
+    width: calc(100% - 40px);
+    margin-left: 10px;
+    margin-right: 30px; } }
+
 .project {
   background-color: #fff;
   display: inline-block;
@@ -219,6 +235,14 @@ body {
     color: white;
     margin: 30px 10px 10px 30px;
     font-size: 35px; }
+
+@media (max-width: 1080px) {
+  .project {
+    flex-basis: calc(100% / 2); } }
+
+@media (max-width: 600px) {
+  .project {
+    flex-basis: 100%; } }
 
 @keyframes hideChip {
   from {
