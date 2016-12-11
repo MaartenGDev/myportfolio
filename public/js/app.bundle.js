@@ -48,15 +48,19 @@
 
 	var Typer = __webpack_require__(1);
 	var Hightlight = __webpack_require__(2);
+	var Tabs = __webpack_require__(3);
 
 	var typer = new Typer();
 	var highlight = new Hightlight();
+	var tabs = new Tabs();
 
 	var content = [{ text: 'Software', selector: '.profile__tag--type', time: 50 }, { text: ' ', selector: '.profile__tag--spacing', time: 0 }, { text: 'Developer', selector: '.profile__tag--branch', time: 80 }];
 
 	typer.type(content);
 
 	highlight.init('.project', [{ selector: '.project__image', classes: ['--zoomed', '--preview'] }, { selector: '.project__overlay', classes: ['--smooth', '--dark'] }, { selector: '.project__chip', classes: ['--hidden', '--zoomed'] }, { selector: '.project__view', classes: ['--hidden'] }]);
+
+	tabs.init('.tabs__nav');
 
 /***/ },
 /* 1 */
@@ -174,8 +178,6 @@
 	    }, {
 	        key: "handleHover",
 	        value: function handleHover(element, actions) {
-	            console.log(element);
-	            console.log(actions);
 	            actions.forEach(function (action) {
 	                var elements = element.querySelectorAll(action.selector);
 
@@ -195,6 +197,63 @@
 	}();
 
 	module.exports = Highlight;
+
+/***/ },
+/* 3 */
+/***/ function(module, exports) {
+
+	'use strict';
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	var Tabs = function () {
+	    function Tabs() {
+	        _classCallCheck(this, Tabs);
+	    }
+
+	    _createClass(Tabs, [{
+	        key: 'init',
+	        value: function init(selector) {
+	            var _this = this;
+
+	            var elements = document.querySelectorAll(selector);
+
+	            elements.forEach(function (element) {
+	                element.addEventListener("click", function () {
+	                    return _this.handleClick(elements, element);
+	                });
+	            });
+	        }
+	    }, {
+	        key: 'handleClick',
+	        value: function handleClick(elements, current) {
+	            var className = 'tabs__nav--active';
+
+	            elements.forEach(function (element) {
+	                element.classList.remove(className);
+	            });
+
+	            var tabId = current.getAttribute('target-tab');
+
+	            var tabItems = document.querySelectorAll('.tabs__item');
+	            var tabItem = document.querySelector('.tabs__item--' + tabId);
+
+	            tabItems.forEach(function (tabItem) {
+	                tabItem.classList.add('tabs__item--hidden');
+	            });
+
+	            tabItem.classList.remove('tabs__item--hidden');
+
+	            current.classList.add(className);
+	        }
+	    }]);
+
+	    return Tabs;
+	}();
+
+	module.exports = Tabs;
 
 /***/ }
 /******/ ]);

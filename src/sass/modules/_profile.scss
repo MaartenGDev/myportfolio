@@ -23,7 +23,7 @@ $text-main: #34495e;
     display: inline-block;
   }
 
-  &__description{
+  &__description {
     margin-top: 40px;
     max-width: 50%;
     line-height: 28px;
@@ -40,5 +40,41 @@ $text-main: #34495e;
       font-style: italic;
       color: $text-main;
     }
+  }
+
+  &__social {
+    font-size: 50px;
+    color: #2c3e50;
+
+    &--left {
+      margin: 0 25px 0 50px;
+    }
+
+    &--right {
+      margin: 0 50px 0 25px;
+    }
+
+    &--github:hover {
+      color: #7f8c8d;
+    }
+
+    &--mail:hover {
+      color: #16a085;
+    }
+    &--linkedin {
+      &:hover {
+        color: #2980b9;
+      }
+    }
+    &--stackoverflow {
+      &:hover {
+        color: #c0392b;
+      }
+    }
+  }
+
+  &__links {
+    margin-top: 50px;
+    margin-bottom: 100px;
   }
 }

@@ -1,8 +1,10 @@
 const Typer = require("./typer.js");
 const Hightlight = require("./highlight");
+const Tabs = require('./tabs');
 
 const typer = new Typer;
 const highlight = new Hightlight;
+const tabs = new Tabs;
 
 const content = [
     {text: 'Software', selector: '.profile__tag--type', time: 50},
@@ -19,4 +21,4 @@ highlight.init('.project', [
     {selector: '.project__view', classes: ['--hidden']},
 ]);
 
-
+tabs.init('.tabs__nav');

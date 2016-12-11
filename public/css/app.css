@@ -7,6 +7,11 @@ body {
 .l-container {
   width: calc(100% - 40px); }
 
+.l-tabs {
+  margin: 0 auto;
+  width: 960px;
+  padding-bottom: 50px; }
+
 .l-projects {
   margin-bottom: 20px;
   display: flex;
@@ -56,11 +61,38 @@ body {
   .profile__tag--branch {
     font-style: italic;
     color: #34495e; }
+  .profile__social {
+    font-size: 50px;
+    color: #2c3e50; }
+    .profile__social--left {
+      margin: 0 25px 0 50px; }
+    .profile__social--right {
+      margin: 0 50px 0 25px; }
+    .profile__social--github:hover {
+      color: #7f8c8d; }
+    .profile__social--mail:hover {
+      color: #16a085; }
+    .profile__social--linkedin:hover {
+      color: #2980b9; }
+    .profile__social--stackoverflow:hover {
+      color: #c0392b; }
+  .profile__links {
+    margin-top: 50px;
+    margin-bottom: 100px; }
+
+.section--title {
+  text-align: center;
+  padding-top: 50px; }
+
+.section--background {
+  background-color: #2c3e50; }
 
 .section__title {
   margin-top: 0;
   font-size: 30px;
   margin-bottom: 0; }
+  .section__title--white {
+    color: #fff; }
 
 .section__item {
   max-width: 960px;
@@ -109,6 +141,30 @@ body {
     transition: background 0.4s; }
     .btn--scale:hover {
       background-color: #34495e; }
+
+.tabs {
+  text-align: left;
+  list-style-type: none;
+  margin-top: 40px;
+  position: relative; }
+  .tabs__navigation {
+    position: absolute;
+    right: -25px;
+    top: 20px; }
+  .tabs__nav {
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.23), 0 3px 12px rgba(0, 0, 0, 0.16);
+    background-color: #2ecc71;
+    padding: 14px 17px;
+    text-align: center;
+    color: white; }
+    .tabs__nav--active {
+      background-color: #27ae60; }
+  .tabs__item {
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    padding: 10px;
+    background-color: white; }
+    .tabs__item--hidden {
+      display: none; }
 
 .project {
   background-color: #fff;

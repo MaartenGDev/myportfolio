@@ -10,8 +10,6 @@ class Highlight {
     }
 
     handleHover(element, actions){
-        console.log(element);
-        console.log(actions);
         actions.forEach(action => {
             const elements = element.querySelectorAll(action.selector);
 
