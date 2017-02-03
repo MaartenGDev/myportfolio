@@ -279,16 +279,10 @@
             <h1 class="section__title">Accounts</h1>
 
             <section class="profile__links">
-                <a href="https://github.com/maartenGDev" target="_blank"><i
-                        class="profile__social profile__social--github fa fa-github" aria-hidden="true"></i></a>
-                <a href="https://www.linkedin.com/in/maarten-grootoonk-098556131" target="_blank"><i
-                        class="profile__social profile__social--linkedin profile__social--left fa fa-linkedin"
-                        aria-hidden="true"></i></a>
-                <a href="http://stackoverflow.com/users/6310593/maartendev" target="_blank"><i
-                        class="profile__social profile__social--stackoverflow profile__social--right fa fa-stack-overflow"
-                        aria-hidden="true"></i></a>
-                <a href="mailto:hello@maartendev.me"><i
-                        class="profile__social profile__social--mail fa fa-envelope" aria-hidden="true"></i></a>
+                {{#each links}}
+                    <a href="{{url}}"   {{#if newTab}}target="_blank"{{/if}}><i
+                            class="social {{cssClass}} fa {{ icon }}"></i></a>
+                {{/each}}
             </section>
         </section>
 </main>

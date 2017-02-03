@@ -3,7 +3,7 @@ const exphbs = require('express-handlebars');
 const app = express()
 const helmet = require('helmet')
 
-app.engine('.hbs', exphbs({defaultLayout: 'main',extname: '.hbs'}));
+app.engine('.hbs', exphbs({defaultLayout: 'main', extname: '.hbs'}));
 
 app.set('view engine', '.hbs');
 
@@ -51,10 +51,39 @@ const projects = [
 
 ];
 
+const links = [
+    {
+        url: 'https://github.com/maartenGDev',
+        cssClass: 'social--github',
+        icon: 'fa-github',
+        newTab: true
+    },
+    {
+        url: 'https://www.linkedin.com/in/maarten-grootoonk-098556131',
+        cssClass: 'social--linkedin social--left',
+        icon: 'fa-linkedin',
+        newTab: true
+    },
+    {
+        url: 'http://stackoverflow.com/users/6310593/maartendev',
+        cssClass: 'social--stackoverflow social--right',
+        icon: 'fa-stack-overflow',
+        newTab: true
+    },
+    {
+        url: 'mailto:hello@maartendev.me',
+        cssClass: 'social--mail',
+        icon: 'fa-envelope',
+        newTab: false
+    },
+
+];
+
 app.get('/', (req, res) => {
     res.render('home', {
         name: 'maarten',
-        projects: projects
+        projects: projects,
+        links: links
     })
 })
 

@@ -64,21 +64,6 @@ body {
   .profile__tag--branch {
     font-style: italic;
     color: #34495e; }
-  .profile__social {
-    font-size: 50px;
-    color: #2c3e50; }
-    .profile__social--left {
-      margin: 0 25px 0 50px; }
-    .profile__social--right {
-      margin: 0 50px 0 25px; }
-    .profile__social--github {
-      color: #7f8c8d; }
-    .profile__social--mail {
-      color: #34495e; }
-    .profile__social--linkedin {
-      color: #2980b9; }
-    .profile__social--stackoverflow {
-      color: #c0392b; }
   .profile__links {
     margin-top: 50px;
     margin-bottom: 100px; }
@@ -203,7 +188,8 @@ body {
     .project__overlay--dark {
       animation: darken 0.5s forwards; }
   .project__image {
-    height: 100%; }
+    height: 100%;
+    width: 100%; }
     .project__image--preview {
       animation: scaleDown 0.5s forwards; }
     .project__image--zoomed {
@@ -285,3 +271,19 @@ body {
 @keyframes scaleUp {
   to {
     transform: scale(1.1); } }
+
+.social {
+  font-size: 50px;
+  color: #2c3e50; }
+  .social--left {
+    margin: 0 25px 0 50px; }
+  .social--right {
+    margin: 0 50px 0 25px; }
+  .social--github {
+    color: #7f8c8d; }
+  .social--mail {
+    color: #34495e; }
+  .social--linkedin {
+    color: #2980b9; }
+  .social--stackoverflow {
+    color: #c0392b; }
