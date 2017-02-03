@@ -5,9 +5,9 @@ const app = express()
 app.engine('handlebars', exphbs({defaultLayout: 'main'}));
 app.set('view engine', 'handlebars');
 
-app.use(express.static('public'))
-app.use('/.well-known',express.static(__dirname + '/.well-known'))
 app.use('/.well-known/acme-challenge/', express.static(__dirname + '/.well-known/acme-challenge'));
+
+app.use(express.static('public'))
 
 app.get('/', function (req, res) {
     res.render('home', {

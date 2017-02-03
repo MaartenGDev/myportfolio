@@ -71,13 +71,13 @@ body {
       margin: 0 25px 0 50px; }
     .profile__social--right {
       margin: 0 50px 0 25px; }
-    .profile__social--github:hover {
+    .profile__social--github {
       color: #7f8c8d; }
-    .profile__social--mail:hover {
+    .profile__social--mail {
       color: #16a085; }
-    .profile__social--linkedin:hover {
+    .profile__social--linkedin {
       color: #2980b9; }
-    .profile__social--stackoverflow:hover {
+    .profile__social--stackoverflow {
       color: #c0392b; }
   .profile__links {
     margin-top: 50px;
