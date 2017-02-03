@@ -160,6 +160,8 @@ body {
     position: absolute;
     right: -25px;
     top: 20px; }
+  .tabs__link {
+    color: #2c3e50; }
   .tabs__nav {
     box-shadow: 0 3px 12px rgba(0, 0, 0, 0.23), 0 3px 12px rgba(0, 0, 0, 0.16);
     background-color: #2ecc71;
