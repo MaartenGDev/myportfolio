@@ -13,13 +13,13 @@ app.use(express.static('public'))
 
 const projects = [
     {
-        image: 'images/project__joblist.png',
+        image: 'images/prod/project__joblist.png',
         title: 'JobList',
         tags: ['PHP', 'Material Design', 'Laravel', 'Landing Page'],
         url: 'https://github.com/MaartenGDev/JobList',
     },
     {
-        image: 'images/project__tripsearch.png',
+        image: 'images/prod/project__tripsearch.png',
         title: 'TripSearch',
         tags: ['ElasticSearch', 'GuzzleHttp', 'Composer', 'PHP'],
         url: 'https://github.com/MaartenGDev/TripSearch',
@@ -31,19 +31,19 @@ const projects = [
         url: '#projects',
     },
     {
-        image: 'images/project__cachedrivers.png',
+        image: 'images/prod/project__cachedrivers.png',
         title: 'CacheDrivers',
         tags: ['PHPUnit', 'Travis CI', 'Package', 'Code Coverage'],
         url: 'https://github.com/MaartenGDev/CacheDrivers',
     },
     {
-        image: 'images/project__planner.png',
+        image: 'images/prod/project__planner.png',
         title: 'Planner',
         tags: ['ReactJS', 'SPA', 'Laravel', 'REST API'],
         url: 'https://github.com/MaartenGDev/planner',
     },
     {
-        image: 'images/project__devblog.png',
+        image: 'images/prod/project__devblog.png',
         title: 'devBlog',
         tags: ['Laravel', 'Blog', 'CRUD'],
         url: 'https://github.com/MaartenGDev/devBlog',

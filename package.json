@@ -4,7 +4,11 @@
   "description": "portfolio site with case studies",
   "main": "index.js",
   "scripts": {
-    "sass": "node-sass src/sass/app.scss public/css/app.css --watch"
+    "sass": "node-sass src/sass/app.scss public/css/app.css --watch --style compressed",
+    "build": "npm-run-all --parallel build:*",
+    "build:sass": "node-sass src/sass/app.scss public/css/app.css --style compressed",
+    "build:js": "webpack -p",
+    "build:image": "imagemin public/images/* --out-dir=public/images/prod"
   },
   "repository": {
     "url": "git@github.com:MaartenGDev/myportfolio.git",
@@ -30,6 +34,8 @@
     "webpack": "^1.13.3"
   },
   "devDependencies": {
+    "imagemin-cli": "^3.0.0",
+    "npm-run-all": "^4.0.1",
     "stylelint": "^7.6.0",
     "stylelint-config-standard": "^15.0.0"
   }
