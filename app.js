@@ -25,7 +25,7 @@ const projects = [
         url: 'https://github.com/MaartenGDev/TripSearch',
     },
     {
-        image: 'images/project__cars.png',
+        image: 'images/prod/project__cars.png',
         title: 'Cars',
         tags: ['PHP', 'Symfony', 'Material Design', 'UX'],
         url: '#projects',
