@@ -280,7 +280,7 @@
 
             <section class="profile__links">
                 {{#each links}}
-                    <a href="{{url}}"   {{#if newTab}}target="_blank"{{/if}}><i class="social {{cssClass}} fa {{ icon }}"></i></a>
+                    <a href="{{url}}" class="social" {{#if newTab}}target="_blank"{{/if}}><i class="{{cssClass}} fa {{ icon }}"></i></a>
                 {{/each}}
             </section>
         </section>
