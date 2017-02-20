@@ -4,11 +4,13 @@
   "description": "portfolio site with case studies",
   "main": "index.js",
   "scripts": {
-    "sass": "node-sass src/sass/app.scss public/css/app.css --watch",
-    "build": "npm-run-all --parallel build:*",
-    "build:sass": "node-sass src/sass/app.scss public/css/app.css --output-style compressed",
-    "build:js": "webpack -p",
-    "build:image": "imagemin public/images/* --out-dir=public/images/prod"
+    "dev": "npm-run-all --parallel dev:*",
+    "dev:sass": "node-sass src/sass/app.sass public/css/app.css --watch",
+    "dev:js": "webpack --watch",
+    "prod": "npm-run-all --parallel prod:*",
+    "prod:sass": "node-sass src/sass/app.sass public/css/app.css --output-style compressed",
+    "prod:js": "webpack -p",
+    "prod:image": "imagemin public/images/* --out-dir=public/images/prod"
   },
   "repository": {
     "url": "git@github.com:MaartenGDev/myportfolio.git",

@@ -45,13 +45,13 @@
 
                 <div class="tabs">
                     <section class="tabs__navigation">
-                        <section target-background="vim" target-tab="1" class="tabs__nav tabs__nav--active">
+                        <section data-target-tab="1" class="tabs__nav tabs__nav--active">
                             <i class="fa fa-code" aria-hidden="true"></i>
                         </section>
-                        <section target-background="server" target-tab="2" class="tabs__nav">
+                        <section data-target-tab="2" class="tabs__nav">
                             <i class="fa fa-server" aria-hidden="true"></i>
                         </section>
-                        <section target-background="security" target-tab="3" class="tabs__nav">
+                        <section data-target-tab="3" class="tabs__nav">
                             <i class="fa fa-lock" aria-hidden="true"></i>
                         </section>
 
@@ -280,8 +280,7 @@
 
             <section class="profile__links">
                 {{#each links}}
-                    <a href="{{url}}"   {{#if newTab}}target="_blank"{{/if}}><i
-                            class="social {{cssClass}} fa {{ icon }}"></i></a>
+                    <a href="{{url}}"   {{#if newTab}}target="_blank"{{/if}}><i class="social {{cssClass}} fa {{ icon }}"></i></a>
                 {{/each}}
             </section>
         </section>
