@@ -12,7 +12,8 @@ class Typed {
 
             const element = document.querySelector(selector);
 
-            this.loopThroughLetters(element, letters, time).then(_ => {
+            this.loopThroughLetters(element, letters, time)
+                .then(() => {
                 index++;
 
                 if (index < elements.length) {

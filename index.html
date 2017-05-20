@@ -1,0 +1,308 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="assets/css/app.css">
+
+    <title>Portfolio</title>
+</head>
+<body>
+<nav class="nav">
+    <ul class="nav__list">
+        <li class="nav__item nav__item--title"><a class="nav__link" href="/">Maarten</a></li>
+        <li class="nav__item"><a class="nav__link" href="#home">Home</a></li>
+        <li class="nav__item"><a class="nav__link" href="#projects">Projects</a></li>
+        <li class="nav__item"><a class="nav__link" href="#skills">Skills</a></li>
+        <li class="nav__item"><a class="nav__link" href="#accounts">Accounts</a></li>
+    </ul>
+</nav>
+
+<main>
+    <section class="hero">
+        <h1>Hello World</h1>
+    </section>
+    <section class="profile" id="#home">
+        <section class="profile__user">
+            <h1 class="profile__title"></h1>
+            <h2 class="profile__subtitle">Software Developer</h2>
+
+
+        </section>
+    </section>
+
+    <section class="section section--center">
+        <h2 class="section__title section__title--offset">ABOUT</h2>
+
+        <section>
+            <p class="profile__description">Ik werk graag met de nieuwste tools en programmeer talen maar ik ken ook
+                de ins en outs van de standaard tools en talen zoals: <span class="tag">PHP</span>, <span
+                        class="tag">CSS</span>, <span class="tag">HTML5</span> en <span class="tag">git</span>. Ik heb
+                met
+                veel verschillende
+                technieken zoals: <span class="tag">NPM</span>, <span class="tag">WebSocket</span>, <span class="tag">Web Security</span>,
+                <span class="tag">Testing</span>, <span class="tag">Git Flow</span> en <span class="tag">Sass</span>
+                gewerkt.</p>
+        </section>
+    </section>
+
+    <section class="section section--center">
+        <h2 class="section__title section__title--offset">PROJECTS</h2>
+    </section>
+
+
+    <section class="l-projects">
+
+    </section>
+
+    <section class="section section--center section--dark-bg" id="skills">
+        <section class="l-tabs">
+            <h1 class="section__title section__title--white">Skills</h1>
+
+            <div class="tabs">
+                <section class="tabs__navigation">
+                    <section data-target-tab="1" class="tabs__nav tabs__nav--active">
+                        <i class="fa fa-code" aria-hidden="true"></i>
+                    </section>
+                    <section data-target-tab="2" class="tabs__nav">
+                        <i class="fa fa-server" aria-hidden="true"></i>
+                    </section>
+                    <section data-target-tab="3" class="tabs__nav">
+                        <i class="fa fa-lock" aria-hidden="true"></i>
+                    </section>
+
+                </section>
+
+                <div class="tabs__item tabs__item--1">
+                    <h3># My Language Stack</h3>
+                    <h4>## Back-end</h4>
+                    <ul>
+                        <li>PHP 5.2(without short array syntax 😕) t/m 7.1 (return typehinting 🎉)
+                            <ul>
+                                <li><a target="_blank" rel="noopener noreferrer" class="tabs__link"
+                                       href="https://github.com/MaartenGDev/TripSearch">Trip Search</a> to plan your
+                                    trip to
+                                    Rotterdam
+                                </li>
+                                <li><a target="_blank" rel="noopener noreferrer" class="tabs__link"
+                                       href="https://github.com/MaartenGDev/CacheDrivers">Caching Libary</a> to
+                                    store
+                                    anything in cache files
+                                </li>
+                                <li>A custom build MVC OOP PHP framework named <a target="_blank" class="tabs__link"
+                                                                                  rel="noopener noreferrer"
+                                                                                  href="https://github.com/MaartenGDev/FastHttp">FastHttp</a>
+                                </li>
+                                <li>A <a target="_blank" rel="noopener noreferrer" class="tabs__link"
+                                         href="https://github.com/MaartenGDev/PlagiaatRest-API">REST Api</a> that
+                                    recognizes
+                                    plagiarism
+                                </li>
+                            </ul>
+                        </li>
+                        <li>Javascript
+                            <ul>
+                                <li>React (<a target="_blank" rel="noopener noreferrer" class="tabs__link"
+                                              href="https://github.com/MaartenGDev/planner"
+                                              title="SPA = Single Page Application">Calendar SPA</a> )
+                                </li>
+                                <li>Adonis (<a target="_blank" rel="noopener noreferrer" class="tabs__link"
+                                               href="https://github.com/MaartenGDev/JsDashboard">JsDashboard</a>)
+                                </li>
+                                <li>NodeJS (<a target="_blank" rel="noopener noreferrer" class="tabs__link"
+                                               href="http://socket.io/">socket.io</a>
+                                    for
+                                    <a target="_blank" rel="noopener noreferrer" class="tabs__link"
+                                       href="https://github.com/MaartenGDev/ReactChatClient">Chat Client</a>)
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <h4>## Front-end</h4>
+                    <ul>
+                        <li>Build Tools
+                            <ul>
+                                <li>Gulp (<a target="_blank" rel="noopener noreferrer" class="tabs__link"
+                                             href="https://github.com/MaartenGDev/plagiaatcontrole/blob/master/gulpfile.js">Watchers
+                                    for ES6 + SCSS</a>)
+                                </li>
+                                <li>Webpack (<a target="_blank" rel="noopener noreferrer" class="tabs__link"
+                                                href="https://github.com/MaartenGDev/react-scss-starter">React SCSS
+                                    Starter</a>)
+                                </li>
+                                <li>NPM scripts for watcher ES6 + React + SCSS(<a target="_blank" class="tabs__link"
+                                                                                  rel="noopener noreferrer"
+                                                                                  href="https://github.com/MaartenGDev/react-scss-starter/blob/master/package.json">Starter
+                                    Kit</a>)
+                                </li>
+                            </ul>
+                        </li>
+                        <li>Design
+                            <ul>
+                                <li>EventPlanner <a target="_blank" rel="noopener noreferrer" class="tabs__link"
+                                                    href="https://github.com/MaartenGDev/planner"
+                                                    title="SPA = Single Page Application">(React SPA + Laravel REST
+                                    Api)</a></li>
+                                <li>Rooster Client <a target="_blank" rel="noopener noreferrer" class="tabs__link"
+                                                      href="https://github.com/MaartenGDev/rooster-client"
+                                                      title="SPA = Single Page Application">(React SPA + Custom
+                                    Api)</a>
+                                <li>Trip Planner <a target="_blank" rel="noopener noreferrer" class="tabs__link"
+                                                    href="https://github.com/MaartenGDev/TripSearch"
+                                                    title="SPA = Single Page Application">(React SPA + Api +
+                                    ElasticSearch)</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="tabs__item tabs__item--2 tabs__item--hidden">
+                    <h3># Server Management</h3>
+                    <h4>## Server setup</h4>
+                    <ul>
+
+                        <li>Security
+                            <ul>
+                                <li>Fail2ban ssh + Fail2ban Apache</li>
+                                <li>Security Headers <a target="_blank" rel="noopener noreferrer" class="tabs__link"
+                                                        href="https://maartendev.me/">Check out the response
+                                    headers</a>
+                                </li>
+                                <li>Scanning access/error logs for SQL Injection/Hacking attemps.</a></li>
+                            </ul>
+                        </li>
+                        <li>Software
+                            <ul>
+                                <li>Ubuntu 14.04.5 x64</li>
+                                <li>Ubuntu 16.04.1 x64</li>
+                            </ul>
+
+                        </li>
+                    </ul>
+                    <h4>## Management Tools</h4>
+                    <ul>
+                        <li>Webservers
+                            <ul>
+                                <li><a target="_blank" rel="noopener noreferrer" class="tabs__link"
+                                       href="https://gist.github.com/MaartenGDev/8382a78e62a3a866b17cc48a00c7aa60">Push
+                                    to deploy script</a> using Deploy keys (<b>.ssh</b> folder with deploy key for
+                                    www-data user)
+                                </li>
+
+                                <li>Nginx/1.10.0
+                                    <ul>
+                                        <li>Let's Encrypt CA (<a target="_blank" rel="noopener noreferrer"
+                                                                 class="tabs__link"
+                                                                 href="https://maartendev.me/">https://maartendev.me/</a>
+                                            has L.E SSL cert)
+                                        </li>
+                                        <li>Bash Scripts to manage sites. (Script to <a target="_blank"
+                                                                                        class="tabs__link"
+                                                                                        rel="noopener noreferrer"
+                                                                                        href="https://gist.github.com/MaartenGDev/13c26310d727941ea0cbea2b15572540">Create</a>
+                                            and
+                                            <a target="_blank" rel="noopener noreferrer" class="tabs__link"
+                                               href="https://gist.github.com/MaartenGDev/df16a3eb3e0bb047451500bf2a185c31">Manage</a>
+                                            sites
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>Apache
+                                    <ul>
+                                        <li>ModSecurity 2.9 (Checks cookies, user agents, form requests)</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+
+
+                    </ul>
+                </div>
+
+                <section class="tabs__item tabs__item--3 tabs__item--hidden">
+                    <h3># Security</h3>
+                    <h4>## Server Security</h4>
+
+                    <ul>
+                        <li>Disable root login</li>
+                        <li>Sudo User</li>
+                        <li>SSH only login, password login disabled</li>
+                        <li>Chroot jail for main (sudo) user</li>
+                        <li>Mysql
+                            <ul>
+                                <li>New user for every website</li>
+                                <li>Limited his own database(and information schema..)</li>
+                                <li>Only permissions that are needed(INSERT, SELECT) and no (DROP / <b>*.*</b>)</li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <h4>## Web Security</h4>
+                    <ul>
+                        <li>XSS - <b><i>&lt;script&gt;alert('hacked!');&lt;script&gt;</i></b>
+                            <ul>
+                                <li>Markdown to prevent XSS and broken html tags</li>
+                                <li>Replace dangerous html tokens with html entities</li>
+                                <li>Escape by default \{{ MyVariable }}(<a class="tabs__link" target="_blank"
+                                                                           rel="noopener noreferrer"
+                                                                           href="https://github.com/MaartenGDev/devBlog/blob/master/resources/views/dashboard/index.blade.php">Laravel's
+                                    template tag</a> for htmlspecialchars)
+                                </li>
+                            </ul>
+                        </li>
+                        <li>SQL Injections
+                            <ul>
+                                <li>PDO prepared statements(no more mysql_query 😅)</li>
+                                <li>Limited database user rights</li>
+                                <li>Binding values to placeholders instead of concatenating the values into the
+                                    query
+                                </li>
+                            </ul>
+                        </li>
+                        <li>CSRF
+                            <ul>
+                                <li>Per Session CSRF token</li>
+                                <li>Encrypted CRSF token to prevent fiddling with the cookie</li>
+                                <li>Validate all requests using CSRF tokens using form fields</li>
+                            </ul>
+                        </li>
+                        <li>ClickJacking
+                            <ul>
+                                <li><b>x-frame-options: DENY</b> HTTP header to prevent IFraming</li>
+                                <li>Strict Cookie settings(http only + secure flag)</li>
+                            </ul>
+                        </li>
+
+                        <li>Best Data Storage practices such as:
+                            <ul>
+                                <li>Bcrypt for passwords</li>
+                                <li><a target="_blank" rel="noopener noreferrer" class="tabs__link"
+                                       href="https://jwt.io/">JWT</a>
+                                    tokens <a class="tabs__link" target="_blank" rel="noopener noreferrer"
+                                              href="https://github.com/MaartenGDev/planner/blob/master/app/Http/Controllers/AuthenticateController.php">(SPA
+                                        + JWT)</a> for authentication
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </section>
+            </div>
+
+        </section>
+    </section>
+
+    <section class="section section--center" id="accounts">
+        <h1 class="section__title">Accounts</h1>
+
+        <section class="profile__links">
+        </section>
+    </section>
+</main>
+
+<script src="assets/js/app.bundle.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400">
+</body>
+</html>

@@ -1,7 +1,12 @@
 .profile
   width: calc(100% - 40px)
   margin: 0 20px
-  height: 100vh
+  display: flex
+  justify-content: center
+
+  &__user
+
+    text-align: center
 
   &__button
     margin: 0 auto
@@ -15,15 +20,24 @@
     right: 0
 
   &__title
-    margin-top: 100px
+    color: #4990E2
+    margin: 50px auto 0 auto
     font-size: 50px
     display: inline-block
+
+  &__subtitle
+    color: #4A4A4A
+    font-size: 40px
+    margin: 10px 0 0 0
+    font-weight: 300
 
   &__description
     margin-top: 40px
     max-width: 50%
     line-height: 28px
     font-weight: 300
+    display: inline-block
+
 
   &__tag
     &--type

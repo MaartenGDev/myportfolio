@@ -1,18 +1,22 @@
-const Typer = require("./typer.js");
-const Hightlight = require("./highlight");
-const Tabs = require('./tabs');
+import Typer from './typer';
+import Hightlight from './highlight';
+import Tabs from './tabs';
+import staticDataLoader from './staticDataLoader';
 
 const typer = new Typer;
 const highlight = new Hightlight;
 const tabs = new Tabs;
 
+import '../sass/app.sass';
+
+staticDataLoader.load();
+
 const content = [
-    {text: 'Software', selector: '.profile__tag--type', time: 50},
-    {text: ' ', selector: '.profile__tag--spacing', time: 0},
-    {text: 'Developer', selector: '.profile__tag--branch', time: 80}
+    {text: 'EXAMPLE USER', selector: '.profile__title', time: 70}
 ];
 
 typer.type(content);
+
 
 highlight.init('.project', [
     {selector: '.project__image', classes: ['--zoomed', '--preview']},
@@ -22,3 +26,4 @@ highlight.init('.project', [
 ]);
 
 tabs.init('.tabs__nav');
+
