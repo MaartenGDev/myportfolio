@@ -8,7 +8,10 @@
     "dev": "webpack --watch",
     "prod": "npm-run-all --parallel prod:*",
     "prod:js": "webpack -p",
-    "prod:image": "imagemin public/images/* --out-dir=public/images/prod"
+    "prod:image": "imagemin public/images/* --out-dir=public/images/prod",
+    "lint": "npm-run-all --parallel lint:*",
+    "lint:js": "standard 'src/**/*.js'  --verbose --fix | snazzy",
+    "lint:sass": "node_modules/sass-lint/bin/sass-lint.js './src/**/*.sass'  -v -q"
   },
   "repository": {
     "url": "git@github.com:MaartenGDev/myportfolio.git",
@@ -20,8 +23,8 @@
   "author": "MaartenGDev",
   "license": "MIT",
   "browserslist": [
-    "> 10%",
-    "last 5 versions"
+    "> 1%",
+    "last 2 versions"
   ],
   "dependencies": {
     "babel-preset-env": "^1.4.0",
@@ -40,7 +43,9 @@
     "node-sass": "^4.5.3",
     "npm-run-all": "^4.0.1",
     "postcss-loader": "^2.0.5",
+    "sass-lint": "^1.10.2",
     "sass-loader": "^4.0.2",
+    "standard": "^10.0.2",
     "style-loader": "^0.13.1",
     "stylelint": "^7.6.0",
     "stylelint-config-standard": "^15.0.0",

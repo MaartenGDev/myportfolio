@@ -1,53 +1,51 @@
-class Typed {
-    sleep(time) {
-        return new Promise(resolve => setTimeout(resolve, time));
+class Typer {
+  sleep (time) {
+    return new Promise(resolve => setTimeout(resolve, time))
+  }
+
+  type (elements) {
+    let index = 0
+
+    let nextItem = index => {
+      const {selector, text, time} = elements[index]
+      const letters = text.split('')
+
+      const element = document.querySelector(selector)
+
+      this.loopThroughLetters(element, letters, time)
+        .then(() => {
+          index++
+
+          if (index < elements.length) {
+            nextItem(index)
+          }
+        })
     }
 
-    type(elements) {
-        let index = 0;
+    nextItem(index)
+  }
 
-        let nextItem = index => {
-            const { selector, text, time } = elements[index];
-            const letters = text.split("");
+  loopThroughLetters (element, letters, time) {
+    return new Promise(resolve => {
+      let index = 0
 
-            const element = document.querySelector(selector);
+      const nextItem = (index) => {
+        this.sleep(time).then(_ => {
+          element.innerHTML += letters[index]
 
-            this.loopThroughLetters(element, letters, time)
-                .then(() => {
-                index++;
+          index++
 
-                if (index < elements.length) {
-                    nextItem(index)
-                }
-            });
-        };
+          if (index < letters.length) {
+            nextItem(index)
+          } else {
+            resolve()
+          }
+        })
+      }
 
-        nextItem(index)
-    }
-
-    loopThroughLetters(element, letters, time) {
-        return new Promise(resolve => {
-            let index = 0;
-
-            const nextItem = (index) => {
-                this.sleep(time).then(_ => {
-                    element.innerHTML += letters[index];
-
-                    index++;
-
-                    if (index < letters.length) {
-                        nextItem(index);
-                    } else {
-                        resolve();
-                    }
-                })
-            };
-
-            nextItem(index);
-        });
-
-
-    }
+      nextItem(index)
+    })
+  }
 }
 
-module.exports = Typed;
+export default Typer
