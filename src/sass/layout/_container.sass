@@ -3,14 +3,17 @@
 
   &--center
     margin: 0 auto
-    max-width: calc(100% - 400px)
+    width: calc(100% - 400px)
 
 .l-tabs
   margin: 0 auto
   width: 960px
   padding-bottom: 50px
 
+@media (max-width: 1200px)
+  .l-container--center
+    width: calc(100% - 100px)
+
 @media (max-width: 1080px)
-  .l-tabs
-    width: 100%
-  
+  .l-container--center
+    width: calc(100% - 20px)
