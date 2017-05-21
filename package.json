@@ -8,7 +8,7 @@
     "dev": "webpack --watch",
     "prod": "npm-run-all --parallel prod:*",
     "prod:js": "webpack -p",
-    "prod:image": "imagemin public/images/* --out-dir=public/images/prod",
+    "prod:image": "imagemin assets/images/* --out-dir=assets/images/prod",
     "lint": "npm-run-all --parallel lint:*",
     "lint:js": "standard 'src/**/*.js'  --verbose --fix | snazzy",
     "lint:sass": "node_modules/sass-lint/bin/sass-lint.js './src/**/*.sass'  -v -q"
