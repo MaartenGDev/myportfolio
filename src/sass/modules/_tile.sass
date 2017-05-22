@@ -1,0 +1,41 @@
+.tile
+  height: 130px
+  width: calc((100% / 3) - 20px)
+  @include box_shadow(2)
+  display: inline-block
+  margin: 0 20px 20px 0
+
+  &__logo
+    height: 100%
+    display: inline-block
+
+
+  &__icon
+    background-color: #60BE86
+    padding: 10px
+    height: calc(100% - 20px)
+    display: inline-block
+    fill: $white
+
+    &--js
+      background-color: #F7DA4E
+
+    &--php
+      background-color: #777BB4
+
+    &--c-sharp
+      background-color: #3498DB
+
+    &--aws
+      background-color: #444444
+      fill: #FAAF34
+    &--nginx
+      background-color: #159F46
+      fill: $white
+
+  &__content
+    width: calc(100% - 130px)
+    height: 100%
+    color: #34495e
+    display: inline-block
+    float: right

@@ -44,6 +44,40 @@ a {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap; }
 
+.tile {
+  height: 130px;
+  width: calc((100% / 3) - 20px);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  display: inline-block;
+  margin: 0 20px 20px 0; }
+  .tile__logo {
+    height: 100%;
+    display: inline-block; }
+  .tile__icon {
+    background-color: #60BE86;
+    padding: 10px;
+    height: calc(100% - 20px);
+    display: inline-block;
+    fill: #ffffff; }
+    .tile__icon--js {
+      background-color: #F7DA4E; }
+    .tile__icon--php {
+      background-color: #777BB4; }
+    .tile__icon--c-sharp {
+      background-color: #3498DB; }
+    .tile__icon--aws {
+      background-color: #444444;
+      fill: #FAAF34; }
+    .tile__icon--nginx {
+      background-color: #159F46;
+      fill: #ffffff; }
+  .tile__content {
+    width: calc(100% - 130px);
+    height: 100%;
+    color: #34495e;
+    display: inline-block;
+    float: right; }
+
 .hero {
   color: white;
   display: -webkit-box;
