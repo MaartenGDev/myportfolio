@@ -78,6 +78,18 @@ a {
     display: inline-block;
     float: right; }
 
+@media (max-width: 1600px) {
+  .tile {
+    width: calc((100% / 3) - 20px); } }
+
+@media (max-width: 1400px) {
+  .tile {
+    width: calc((100% / 2) - 20px); } }
+
+@media (max-width: 800px) {
+  .tile {
+    width: 100%; } }
+
 .hero {
   color: white;
   display: -webkit-box;
@@ -200,6 +212,10 @@ a {
   margin: 0 0 2em 0;
   font-weight: 300;
   max-width: 70%; }
+
+@media (max-width: 1400px) {
+  .section__description {
+    max-width: 100%; } }
 
 .tag {
   border-bottom: 2px solid #2c3e50; }
