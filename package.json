@@ -11,7 +11,8 @@
     "prod:image": "imagemin assets/images/* --out-dir=assets/images/prod",
     "lint": "npm-run-all --parallel lint:*",
     "lint:js": "standard 'src/**/*.js'  --verbose --fix | snazzy",
-    "lint:sass": "node_modules/sass-lint/bin/sass-lint.js './src/**/*.sass'  -v -q"
+    "lint:sass": "node_modules/sass-lint/bin/sass-lint.js './src/**/*.sass'  -v -q",
+    "deploy": "aws s3 sync . s3://aws-website-portfolio-yjme8 --exclude '*.DS_Store*' --exclude '*' --include 'assets/*' --include 'index.html'"
   },
   "repository": {
     "url": "git@github.com:MaartenGDev/myportfolio.git",
