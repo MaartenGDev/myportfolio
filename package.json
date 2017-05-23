@@ -6,13 +6,12 @@
   "scripts": {
     "start": "node app.js",
     "dev": "webpack --watch",
-    "prod": "npm-run-all --parallel prod:*",
-    "prod:js": "webpack -p",
-    "prod:image": "imagemin assets/images/* --out-dir=assets/images/prod",
     "lint": "npm-run-all --parallel lint:*",
     "lint:js": "standard 'src/**/*.js'  --verbose --fix | snazzy",
     "lint:sass": "node_modules/sass-lint/bin/sass-lint.js './src/**/*.sass'  -v -q",
-    "deploy": "aws s3 sync . s3://aws-website-portfolio-yjme8 --exclude '*.DS_Store*' --exclude '*' --include 'assets/*' --include 'index.html'"
+    "deploy": "run-s deploy:*",
+    "deploy:js": "webpack -p",
+    "deploy:s3": "aws s3 sync . s3://maartendev.me --exclude '*.DS_Store*' --exclude '*' --include 'assets/*' --include 'index.html' --include 'favicon.ico'"
   },
   "repository": {
     "url": "git@github.com:MaartenGDev/myportfolio.git",
