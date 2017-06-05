@@ -48,14 +48,21 @@
     position: absolute
     bottom: 0
 
-@media (max-width: 1600px)
+@media (max-width: 1600px)  and (min-width: 1080px)
   .card
-    width: calc((100% / 3) - 20px)
+    width: calc((100% / 3) - 15px)
 
-@media (max-width: 1080px)
+    &:nth-child(3n)
+      margin-right: 0
+
+@media (max-width: 1080px) and (max-width: 1600px)
   .card
-    width: calc((100% / 2) - 20px)
+    width: calc((100% / 2) - 10px)
 
-@media (max-width: 600px)
+    &:nth-child(2n)
+      margin-right: 0
+
+@media (max-width: 600px) and (max-width: 1080px)
   .card
     width: 100%
+    margin-right: 0

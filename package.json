@@ -11,7 +11,7 @@
     "lint:sass": "node_modules/sass-lint/bin/sass-lint.js './src/**/*.sass'  -v -q",
     "deploy": "run-s deploy:*",
     "deploy:js": "webpack -p",
-    "deploy:s3": "aws s3 sync . s3://maartendev.me --exclude '*.DS_Store*' --exclude '*' --include 'assets/*' --include 'index.html' --include 'favicon.ico'"
+    "deploy:s3": "aws s3 sync --acl public-read --delete --exclude '*'  --include 'assets/*' --include 'index.html' --include 'favicon.ico' . s3://maartendev.me"
   },
   "repository": {
     "url": "git@github.com:MaartenGDev/myportfolio.git",
