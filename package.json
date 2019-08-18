@@ -4,7 +4,6 @@
   "description": "portfolio site with case studies",
   "main": "index.js",
   "scripts": {
-    "start": "node app.js",
     "dev": "webpack --watch",
     "lint": "npm-run-all --parallel lint:*",
     "lint:js": "standard 'src/**/*.js'  --verbose --fix | snazzy",
