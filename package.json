@@ -43,11 +43,11 @@
     "npm-run-all": "^4.0.1",
     "postcss-loader": "^2.0.5",
     "sass-lint": "^1.13.1",
-    "sass-loader": "^4.0.2",
+    "sass-loader": "^13.1.0",
     "standard": "^10.0.2",
     "style-loader": "^0.13.1",
     "stylelint": "^7.6.0",
     "stylelint-config-standard": "^15.0.0",
-    "webpack": "^2.5.1"
+    "webpack": "^5.75.0"
   }
 }
